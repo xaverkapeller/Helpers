@@ -3,6 +3,8 @@ Helpers
 
 A collection of useful helper and utility classes.
 
+Not all classes have been updated to fully support Android 5.0!
+
 License
 =======
 
