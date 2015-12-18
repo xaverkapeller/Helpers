@@ -27,6 +27,14 @@ public class Dates {
         }
         return null;
     }
+    
+    public static String format(Date date, String pattern, Locale locale) {
+        if (date != null) {
+            SimpleDateFormat dateFormat = new SimpleDateFormat(pattern, locale);
+            return dateFormat.format(date);
+        }
+        return null;
+    }
 
     public static String formatDate(Date date) {
         if (date != null) {
@@ -65,6 +73,11 @@ public class Dates {
 
     public static Date parse(String dateString, String pattern) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        return dateFormat.parse(dateString);
+    }
+    
+    public static Date parse(String dateString, String pattern, Locale locale) throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern, locale);
         return dateFormat.parse(dateString);
     }
 
